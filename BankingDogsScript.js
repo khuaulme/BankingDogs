@@ -13,6 +13,7 @@ const userAction = async () =>
     let cust = await document.getElementById('myInput').value;
     let txt = "";
     let account_txt = "";
+    let img = "dog.png";
    
     console.log(cust);
       
