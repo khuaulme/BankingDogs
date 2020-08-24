@@ -1,5 +1,5 @@
 var user;
-const client = stitch.Stitch.initializeDefaultAppClient("bankingdogs-jbwjq");
+const client = stitch.Stitch.initializeDefaultAppClient("bankingdogs-ukaex");
 
 (async ()=>{
     user = await client.auth.loginWithCredential(new stitch.AnonymousCredential());
@@ -18,7 +18,7 @@ const userAction = async () =>
     console.log(cust);
       
     const resp = await axios({
-        url: 'https://realm.mongodb.com/api/client/v2.0/app/bankingdogs-jbwjq/graphql',
+        url: 'https://realm.mongodb.com/api/client/v2.0/app/bankingdogs-ukaex/graphql',
         method: 'post',
         headers: {
             'Authorization': `Bearer ${user.auth.activeUserAuthInfo.accessToken}`
@@ -26,21 +26,22 @@ const userAction = async () =>
         data: {
             query:`
              query {
-              customer(query:{name:"${cust}"}) {
-                name
-                email
-                address
-                accounts{
-                  account_id
-                  products
+                  customer(query:{name:"${cust}"}) {
+                    name
+                    email
+                    address
+                    accounts{
+                        account_id
+                        products
+                    }
+                    
+                  }
+                  DogAndQuote {
+                    author
+                        dogImage
+                        quote
+                  }   
                 }
-              }
-              DogAndQuote {
-                author
-                    dogImage
-                    quote
-              }
-            }
                 `
             }
         });            
@@ -54,8 +55,7 @@ const userAction = async () =>
             
             -  ${resp.data.data.DogAndQuote.author}`;
         img = resp.data.data.DogAndQuote.dogImage;
-    //    showElement("quote");
-        }
+       }
 
      //   IF ACCOUNTS HIT
         if (resp.data.data.customer.accounts){
@@ -102,13 +102,3 @@ const userAction = async () =>
 
     document.getElementById("first-description").innerHTML = first_txt;    
 }
-
-function showElement(element) {
-    var x = document.getElementById(element);
-    if (x.style.display == "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }  
-}
-
