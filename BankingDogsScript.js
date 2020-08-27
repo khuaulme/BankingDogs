@@ -24,22 +24,22 @@ const userAction = async () =>
             'Authorization': `Bearer ${user.auth.activeUserAuthInfo.accessToken}`
         },
         data: {
-            query:`
-             query {
-                  customer(query:{name:"${cust}"}) {
+            variables: {cust},
+            query :`
+             query ($cust: String) {
+                  customer(query:{name:$cust}) {
                     name
                     email
                     address
                     accounts{
                         account_id
                         products
-                    }
-                    
+                    }  
                   }
                   DogAndQuote {
                     author
-                        dogImage
-                        quote
+                    dogImage
+                    quote
                   }   
                 }
                 `
