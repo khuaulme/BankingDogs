@@ -5,10 +5,12 @@ Performant and efficient, this groundbreaking API query language gives developer
 *This web application provides the front-end for the BankingDogs application built in the Realm GraphQL tutorial published on the MongoDB DevHub.* 
 
 In it, we take the **sample_analytics** dataset and set up a hosted, serverless, and secure GraphQL API for our data in minutes. 
-![Customer Accounts Data](assets/CustAcctsDiagram.jpg)
+
+<img src="assets/CustAcctsDiagram.jpg" width="700">
 
 Then we will extend that API with GraphQL **relationships** to other data collections and **custom resolvers** in order to bundle together different data sources and APIs together under the same schema. 
-![Data Back-End](assets/GraphQLDiagram.jpg)
+
+<img src="assets/GraphQLDiagram.jpg" width="700">
 
 Finally, we will build out a web application using our GraphQL endpoint to demonstrate how GraphQL gives us exactly the data we want- nothing more, nothing less.
 
