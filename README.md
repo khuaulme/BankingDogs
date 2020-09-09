@@ -6,15 +6,21 @@ Performant and efficient, this groundbreaking API query language gives developer
 
 In it, we take the **sample_analytics** dataset and set up a hosted, serverless, and secure GraphQL API for our data in minutes. 
 
-<img src="assets/CustAcctsDiagram.jpg" width="700">
+<p align="center">
+  <img src="assets/CustAcctsDiagram.jpg" width="700">
+</p>
 
 Then we will extend that API with GraphQL **relationships** to other data collections and **custom resolvers** in order to bundle together different data sources and APIs together under the same schema. 
 
-<img src="assets/GraphQLDiagram.jpg" width="700">
+<p align="center">
+  <img src="assets/GraphQLDiagram.jpg" width="700">
+</p>
 
 Finally, we will build out a web application using our GraphQL endpoint to demonstrate how GraphQL gives us exactly the data we want- nothing more, nothing less.
 
-![BankingDogs Demo](assets/appdemo.gif)
+<p align="center">
+  <img src="assets/appdemo.gif">
+</p>
 
 
 With such extensibility, you can iterate even more quickly on frontend features your application users will love.
